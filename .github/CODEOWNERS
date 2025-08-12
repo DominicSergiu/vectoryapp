@@ -1,0 +1,5 @@
+# Locked functionality paths
+/src/ImageVectorizer.js @dominiclucaciu
+/src/**/vectorizer* @dominiclucaciu
+/src/**/vectorization* @dominiclucaciu
+/package.json @dominiclucaciu
