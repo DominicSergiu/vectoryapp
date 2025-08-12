@@ -3,19 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.6.4",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "13.5.0",
+    "imagetracerjs": "1.2.6",
+    "jimp": "1.6.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-dropzone": "14.3.8",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "svg-captcha": "1.4.0",
+    "web-vitals": "2.1.4"
+  },
+  "devDependencies": {
+    "husky": "9.1.6",
+    "lint-staged": "15.2.8",
+    "prettier": "3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:smoke": "CI=true react-scripts test --watchAll=false --testPathPattern=vectorizer.smoke",
+    "ci": "CI=true npm run build && npm run test -- --watchAll=false",
+    "prepare": "husky install",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
